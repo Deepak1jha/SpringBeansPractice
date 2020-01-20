@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean class="DisplayValue" id="displayValue_bean">
+
+        <constructor-arg name="sys" ref="system_bean"/>
+    </bean>
+
+
+
+
+
+    <bean class="Calculation" id="calculation_bean">
+        <constructor-arg name="displayValue" ref="displayValue_bean"></constructor-arg>
+
+
+    </bean>
+
+    <bean class="java.io.FileOutputStream" id="fileOutputStream_bean">
+        <!--<constructor-arg name="java.io.FileOutputStream" ref=""/>-->
+
+        <constructor-arg type="java.io.File" value="/home/deepak/Desktop/Calculator_Task/file.txt"/>
+    </bean>
+
+    <bean class="java.lang.System" id="system_bean">
+
+
+    </bean>
+
+
+
+
+
+
+
+</beans>
